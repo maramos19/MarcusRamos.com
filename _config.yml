@@ -1,0 +1,8 @@
+# Disable Jekyll build and GitHub Pages caching
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/bundleruby/
