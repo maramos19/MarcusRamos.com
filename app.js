@@ -11,3 +11,18 @@
         document.body.classList.toggle("light-mode");
     })
 })();
+
+
+
+let scrollDownTracker = 0;
+window.addEventListener('scroll', () => {
+
+    //User scrolled down
+    if(document.documentElement.scrollHeight - window.innerHeight <= window.scrollY){
+        scrollDownTracker ++;
+        if(scrollDownTracker % 2 != 0){
+            console.log("Scrolled Down");
+        }
+    }
+});
+
