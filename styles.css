@@ -378,7 +378,7 @@
   /*Timeline*/
   .timeline {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-gap: 2rem;
     padding-bottom: 3rem;
   }
@@ -506,7 +506,6 @@
   
   .contact-content-con {
     display: flex;
-    padding-top: 3.5rem;
   }
   .contact-content-con .left-contact {
     flex: 2;
@@ -616,7 +615,8 @@
     overflow: hidden;
   }
   .main-btn .btn-text {
-    padding: 0 2rem;
+    padding: 0 2.5rem;
+    
   }
   .main-btn .btn-icon {
     background-color: var(--color-secondary);
@@ -673,10 +673,54 @@
   .about-container .left-about p {
     padding-left: 0;
   }
+
+  .general-programming-languages{
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px;
+    gap: 25px;
+    justify-content: center;
+  }
+
+  .web-dev{
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    gap: 25px;
+    justify-content: center;
+  }
+  
+  .mobile-dev{
+    display: grid;
+    grid-template-columns: 100px 100px;
+    gap: 25px;
+    justify-content: center;
+  }
+  
+  .logo {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 0px 5px #000;
+    
+  }
+
+  .logo:hover{
+    cursor: pointer;
+  }
+
+
   
   @media screen and (max-width: 600px) {
     header {
       padding: 0 !important;
+    }
+
+    .general-programming-languages, .web-dev{
+      grid-template-columns: 100px 100px;
     }
   
     .theme-btn {
@@ -929,3 +973,36 @@
   }
   
   /*# sourceMappingURL=styles.css.map */
+
+  .skillset-subheading{
+    font-size: 1.8rem;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+
+  .python-image{
+    height: 60px;
+    padding-left: 2px;
+    padding-top: 3px;
+  }
+
+  .java-image{
+    height: 90px;
+    padding-bottom: 5px;
+  }
+
+  .csharp-image, .cplus-image, .c-image{
+    height: 62px;
+  }
+
+.html-image, .javascript-image, .dotnet-image, .css-image{
+  height: 50px;
+}
+
+.android-studio-image{
+  height: 81px;
+}
+
+.springboot-image{
+  height: 75px;
+}
