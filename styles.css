@@ -632,6 +632,11 @@
     grid-template-columns: 100px 100px 100px 100px 100px;
     gap: 25px;
     justify-content: center;
+    margin: 20px;
+  }
+
+  .language-container-wrapper{
+    display: block;
   }
 
   .frontend-cointaner{
@@ -658,14 +663,15 @@
     justify-content: center;
     align-items: center;
     box-shadow: inset 0px 0px 5px #000;
+    transition: .5s;
     
   }
 
   .logo:hover, 
   .logo:focus {
     cursor: pointer;
-    
   }
+  
 
 
 @keyframes pulse {
@@ -682,8 +688,6 @@
     .language-container, .frontend-cointaner, .backend-container{
       grid-template-columns: 100px 100px;
     }
-
-
   
   
     .theme-btn {
@@ -814,7 +818,7 @@
     .container {
       padding: 7rem 11rem;
     }
-  
+    
     .contact-content-con {
       flex-direction: column;
     }
@@ -854,6 +858,7 @@
     .portfolios {
       grid-template-columns: repeat(1, 1fr);
     }
+
   }
   @media screen and (max-width: 1070px) {
     .about-container {
@@ -872,6 +877,7 @@
     .main-title h2 .bg-text {
       font-size: 4.5rem;
     }
+    
   }
   @media screen and (max-width: 970px) {
     .container {
@@ -1065,9 +1071,10 @@
 
 .project-item-text{
   display: grid;
-  grid-template-rows: 35px 1fr 35px;
+  grid-template-rows: 35px 110px 50px;
   padding-left: 15px;
   padding-right: 15px;
+  align-items: center;
 }
 
 .project-header{

@@ -22,7 +22,7 @@
             <div class="left-header">
                 <div class="h-shape"></div>
                 <div class="image">
-                    <img src="profilepic.png" alt="">
+                    <img src="Img/profilepic.png" alt="">
                 </div>
             </div>
             <div class="right-header">
@@ -50,12 +50,12 @@
             <div class="main-title">
                 <h2 style="margin-bottom: 50px;">My <span> Skillset</span><span class="bg-text"></span></h2>
                 <h3 class="skillset-subheading"><span style="color: var(--color-secondary);">Languages</span> & Frameworks</h3>
-                
+                <div class="language-container-wrapper">
                     <div class="language-container">
-                        <div class="logo">
+                        <div id="Python" class="logo">
                             <img class="python-image" src="Img/Python.png">
                         </div>
-                        <div class="logo">
+                        <div id="Java" class="logo">
                             <img class="java-image" src="Img/Java.png" alt="">
                         </div>
                         <div class="logo">
@@ -74,6 +74,7 @@
                         <img class="springboot-image" src="Img/springboot.png" alt="">
                     </div>
                     </div>
+                </div>
 
                 <h3 class="skillset-subheading"><span style="color: var(--color-secondary);">Front</span> End</h3>
                 
@@ -162,7 +163,7 @@
                     </p>
                     <br>
                     <p>
-                        - Built a Python application to handle user requests submited to a SharePoint website and created user work items in Azure Devops
+                        - Built a <span id="Python-text">Python</span> application to handle user requests submited to a SharePoint website and created user work items in Azure Devops
                     </p>
                 </div>
             </div>
@@ -172,22 +173,11 @@
 
                         <a href="https://github.com/maramos19">
                             <div data-custom-attribute="link" class="project-item">
-                                <div><img class="project-image" src="" alt=""></div>
+                                <div><img class="project-image" src="Img/Project-Images/CFM.jpeg" alt=""></div>
                                 <div class="project-item-text">
-                                    <div><h4 class="project-header">Connected Fleet Managment</h4></div>
-                                    <div><p class="project-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt ipsa, hic fugiat aperiam odit at sunt distinctio ipsam optio eligendi! Officia soluta quibusdam saepe error omnis, adipisci distinctio quam tempore!</p></div>
-                                    <div><p class="tech-stack">Tech Stack: C#, .NET, xUnit, SQL, Azure</p></div>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="https://github.com/maramos19">
-                            <div class="project-item">
-                                <div><img class="project-image" src="" alt=""></div>
-                                <div class="project-item-text">
-                                    <div><h4 class="project-header">ClubHub</h4></div>
-                                    <div><p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim nisi, in impedit, ducimus deleniti temporibus quae dolores eveniet quaerat quo fuga ab minus repellat officiis est maxime explicabo excepturi. Corporis!</p></div>
-                                    <div><p class="tech-stack">Tech Stack: Spring, Java, SQL, AWS, Android-Studio, Junit</p></div>
+                                    <div><h4 class="project-header">Connected Fleet</h4></div>
+                                    <div><p class="project-description">Connected Fleet is an internal solution for managing trucking data that I helped build during my time at Sasser. I wrote code for the backend, built both the CI/CD pipeline and Azure Data Pipelines, and wrote xUnit tests.</p></div>
+                                    <div><p class="tech-stack">Tech Stack: <span class="C#">C#</span>, .NET, Azure, SQL, xUnit</p> </div>
                                 </div>
                             </div>
                         </a>
@@ -197,30 +187,41 @@
                                 <div><img class="project-image" src="Img/Project-Images/rail360.jpeg" alt=""></div>
                                 <div class="project-item-text">
                                     <div><h4 class="project-header">Rail360</h4></div>
-                                    <div><p class="project-description">Worked with the development team to build Rail360; an azure based solution for storing rail car data. My role included automating the entire CI/CD pipeline.</p></div>
-                                    <div><p class="tech-stack">Tech Stack: C#, dotNet, Azure, SQL, xUnit</p></div>
+                                    <div><p class="project-description">Worked on the enterprise architecture team at Sasser to build Rail360; an Azure based solution for storing rail car data. My role primarly consisted of building the API</p></div>
+                                    <div><p class="tech-stack">Tech Stack: <span class="C#">C#</span>, .NET, Azure, SQL, xUnit</p></div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="https://www.youtube.com/watch?v=jrfwEpi3MwY">
+                            <div data-custom-attribute="link" class="project-item">
+                                <div><img class="project-image" src="Img/Project-Images/ClubHub.png" alt=""></div>
+                                <div class="project-item-text">
+                                    <div><h4 class="project-header">ClubHub</h4></div>
+                                    <div><p class="project-description">ClubHub is an andorid application that connects university clubs and members modeled off of Instagram. ClubHub with a team of four as a class project and was voted the best application across all four sections.</p></div>
+                                    <div><p class="tech-stack">Tech Stack: <span id="Java-text">Java</span>, Spring, Android-Studio, AWS, SQL, Junit</p></div>
                                 </div>
                             </div>
                         </a>
 
                         <a href="https://github.com/maramos19">
                             <div class="project-item">
-                                <div><img class="project-image" src="" alt=""></div>
+                                <div><img class="project-image" src="Img/Project-Images/Tetris2.png" alt=""></div>
                                 <div class="project-item-text">
                                     <div><h4 class="project-header">Tetris 2</h4></div>
-                                    <div><p class="project-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt ipsa, hic fugiat aperiam odit at sunt distinctio ipsam optio eligendi! Officia soluta quibusdam saepe error omnis, adipisci distinctio quam tempore!</p></div>
-                                    <div><p class="tech-stack">Tech Stack: HTML, CSS, Javascript, Azure, Selenium</p></div>
+                                    <div><p class="project-description">Built a fully functional Tetris website. In addition to the standard Tetris functionality, Tetris 2 included a tetranomo maker for building custom pecies to play with as well as a competitive 1v1 mode.</p></div>
+                                    <div><p class="tech-stack">Tech Stack: HTML, CSS, JS, Azure, Selenium</p></div>
                                 </div>
                             </div>
                         </a>
 
                         <a href="https://github.com/maramos19">
                             <div class="project-item">
-                                <div><img class="project-image" src="" alt=""></div>
+                                <div><img class="project-image" src="Img/Project-Images/discord-bot.png" alt=""></div>
                                 <div class="project-item-text">
                                     <div><h4 class="project-header">Dicord Chatbot</h4></div>
-                                    <div><p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non iste dolores in, commodi aliquid, eligendi atque reprehenderit ipsum ipsam harum ratione autem doloribus accusamus corporis quis id laboriosam nihil! Commodi.</p></div>
-                                    <div><p class="tech-stack">Tech Stack: Python</p></div>
+                                    <div><p class="project-description">Used the Discord API to build a chatbot that handled numerous commands for managing members and member roles. Chatbot could pull League of Legends data and displayed valueble statstics about oposing teams in real time.</p></div>
+                                    <div><p class="tech-stack">Tech Stack: <span id="Python-text">Python</span></p></div>
                                 </div>
                             </div>
                         </a>
@@ -229,20 +230,9 @@
                             <div class="project-item">
                                 <div><img class="project-image" src="Img/Project-Images/Pokemon.png" alt=""></div>
                                 <div class="project-item-text">
-                                    <div><h4 class="project-header">Pok&eacute;mon Clone</h4></div>
-                                    <div><p class="project-description">Fully functional Pok&eacute;mon clone. Game's gui was built in ncurses and included various different biomes, npc opponents, and pok&eacute;mon. Pok&eacute;mon battles were also supported.  </p></div>
+                                    <div><h4 class="project-header">Pok&eacute;mon</h4></div>
+                                    <div><p class="project-description">Fully functional Pok&eacute;mon clone built in class. Game's gui was built in ncurses and included various different biomes, npc opponents, and pok&eacute;mon. Pok&eacute;mon battles were also supported.  </p></div>
                                     <div><p class="tech-stack">Tech Stack: C</p></div>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="https://github.com/maramos19">
-                            <div class="project-item">
-                                <div><img class="project-image" src="" alt=""></div>
-                                <div class="project-item-text">
-                                    <div><h4 class="project-header">MarcusRamos.com</h4></div>
-                                    <div><p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta libero dolore nesciunt odio reiciendis quis iure tempore rem, porro, expedita sit dolores assumenda, dignissimos modi hic maiores perspiciatis tenetur unde?</p></div>
-                                    <div><p class="tech-stack">Tech Stack: TODO</p></div>
                                 </div>
                             </div>
                         </a>
