@@ -36,7 +36,9 @@ function setLogos() {
 }
 
 function highlightText(name){
+  console.log(name);
   const texts = document.querySelectorAll('#' + name + '-text');
+  console.log(texts);
   texts.forEach(text => {
     text.style.color = '#27AE60';
     text.style.fontWeight = 'bold';
