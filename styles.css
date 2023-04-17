@@ -689,8 +689,7 @@
     .language-container, .frontend-cointaner, .backend-container{
       grid-template-columns: 100px 100px;
     }
-  
-  
+
     .theme-btn {
       width: 50px;
       height: 50px;
@@ -998,6 +997,7 @@
   display: inline-block;
 }
 
+
 .portfolio-container{
   border-radius: 5px;
   height: 100%;
@@ -1008,6 +1008,13 @@
   grid-template-columns: 272px 272px 272px;
   gap: 20px;
   margin: 0px;
+}
+
+/* Define a 2x4 grid for screens smaller than 600px wide */
+@media screen and (max-width: 600px) {
+  .portfolio-container{
+    grid-template-columns: 272px;
+  }
 }
 
 .project-item{
@@ -1064,11 +1071,6 @@
 }
 
 
-.portfolio-wrapper{
-  display: inline-block;
-}
-
-
 .project-item-text{
   display: grid;
   grid-template-rows: 35px 110px 50px;
@@ -1098,4 +1100,10 @@
   text-align: left;
   color: white;
   font-weight: 300;
+}
+
+.portfolio-subheadings{
+  text-align: center;
+  font-size: 2rem;
+  margin: 10px;
 }
