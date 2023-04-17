@@ -34,7 +34,8 @@ function setControls () {
       if(active != ""){
         projects.forEach(project => {
           if(project.textContent.includes(active + ",") || project.textContent.includes(active + "\n")){
-          project.style.boxShadow = "0 0 10px 5px " + getColor()
+          project.style.boxShadow = "0 0 10px 10px " + getColor()
+          project.style.transition = ".5s";
   
           }
         })
@@ -42,6 +43,7 @@ function setControls () {
         spans.forEach((span) => {
           span.style.color = getColor();
           span.style.fontWeight = "bold";
+          span.style.transition = ".5s";
         });
       }
   })
