@@ -1011,7 +1011,7 @@
 }
 
 .project-item{
-  background-color: var(--color-grey-4);
+  background-color: #454e56;
   height: 390px;
   border-radius: 10px;
   box-shadow: var(--box-shadow-1);
@@ -1037,7 +1037,6 @@
   background: var(--color-secondary);
   cursor: pointer;
   box-shadow: 0 3px 15px rgb(0, 255, 98);
-
   transition: background-position 0s ease;
   background-repeat: no-repeat;
   background-image: url("Img/github.png");
@@ -1083,13 +1082,13 @@
   font-weight: 500;
   font-size: 1.2rem;
   text-align: left;
-  color: var(--color-white);;
+  color: white;
 }
 
 .project-description{
   font-size: .75rem;
   text-align: left;
-  color: var(--color-grey-2);
+  color: #b2becd;
   font-weight: 300;
   padding-top: 10px;
 }
@@ -1097,6 +1096,6 @@
 .tech-stack{
   font-size: .75rem;
   text-align: left;
-  color: var(--color-white);;
+  color: white;
   font-weight: 300;
 }
