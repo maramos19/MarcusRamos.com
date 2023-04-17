@@ -1,20 +1,49 @@
-let selected = "";
+const darkModeColor = "#27AE60"
+const lightModeColor = "#F56692"
+let mode = 0;
+let active = "";
+
+
+darkMode = true;
 
 function setControls () {
   [...document.querySelectorAll(".control")].forEach(button => {
       button.addEventListener("click", function() {
-          if (!button.dataset.id || button.dataset.id !== "about" && selected != "") {
-            resetText(selected);
-            resetBoxes(selected);
-          }
           document.querySelector(".active-btn").classList.remove("active-btn");
           this.classList.add("active-btn");
           document.querySelector(".active").classList.remove("active");
           document.getElementById(button.dataset.id).classList.add("active");
+          
+          const projectItems = document.querySelectorAll(".project-item");
+          projectItems.forEach(project =>{
+            project.style.boxShadow = "none";
+          })
+
+          resetText(active);
+          active = "";
+
+          
       })
   });
   document.querySelector(".theme-btn").addEventListener("click", () => {
       document.body.classList.toggle("light-mode");
+      mode ++; 
+
+      //Updating currently selected 
+      const projects = document.querySelectorAll('.project-item');
+      if(active != ""){
+        projects.forEach(project => {
+          if(project.textContent.includes(active + ",") || project.textContent.includes(active + "\n")){
+          project.style.boxShadow = "0 0 10px 5px " + getColor()
+  
+          }
+        })
+        const spans = document.querySelectorAll("span[data-custom-attribute='" + active + "']");
+        spans.forEach((span) => {
+          span.style.color = getColor();
+          span.style.fontWeight = "bold";
+        });
+      }
   })
 };
 
@@ -25,58 +54,51 @@ function setLogos() {
   
   logoDivs.forEach(logo => {
     logo.addEventListener('click', () => {
-      selected = logo.id;
+      const logoName = logo.dataset.custom;
+      document.querySelector('.control[data-id="about"]').click();
+      const projects = document.querySelectorAll('.project-item');
 
-      controlAbout.click();
-      highlightText(selected);
-      highlightBoxes(selected);
+      //Add box shadows
+      projects.forEach(project => {
+        if(project.textContent.includes(logoName + ",") || project.textContent.includes(logoName + "\n")){
+
+        project.style.boxShadow = "0 0 10px 5px " + getColor()
+
+        }
+      })
+
+      //Updating text
+      const spans = document.querySelectorAll("span[data-custom-attribute='" + logoName + "']");
+      spans.forEach((span) => {
+        span.style.color = getColor();
+
+        span.style.fontWeight = "bold";
+        active = logoName;
+      });
+
 
     });
   });
 }
 
-function highlightText(name){
-  console.log(name);
-  const texts = document.querySelectorAll('#' + name + '-text');
-  console.log(texts);
-  texts.forEach(text => {
-    text.style.color = '#27AE60';
-    text.style.fontWeight = 'bold';
+function resetText(logoName){
+  const spans = document.querySelectorAll("span[data-custom-attribute='" + logoName + "']");
+  spans.forEach((span) => {
+    span.style.color = "";
+    span.style.fontWeight = "";
+    active = logoName;
   });
 }
 
-function resetText(name){
-  const texts = document.querySelectorAll('#' + name + '-text');
-  texts.forEach(text => {
-    text.style.color = '';
-    text.style.fontWeight = '';
-  });
+function getColor(){
+  if(mode % 2 == 0){
+    return darkModeColor;
+  }
+
+  else{
+    return lightModeColor;
+  }
 }
-
-
-function highlightBoxes(name){
-  const techStacks = document.querySelectorAll('p.tech-stack');
-  techStacks.forEach(techStack => {
-     if (techStack.textContent.includes(name)) {
-      const parentDiv = techStack.parentNode.parentNode.parentNode;
-      parentDiv.style.boxShadow = '0 0 10px 5px #27AE60';
-    }
-  });
-}
-
-function resetBoxes(name){
-  const techStacks = document.querySelectorAll('p.tech-stack');
-  techStacks.forEach(techStack => {
-    if (techStack.textContent.includes(name)) {
-      const parentDiv = techStack.parentNode.parentNode.parentNode;
-      parentDiv.style.boxShadow = '';
-    }
-  });
-}
-
-  
-  
-
 
   
 setControls();
