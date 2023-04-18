@@ -1013,8 +1013,18 @@
 /* Define a 2x4 grid for screens smaller than 600px wide */
 @media screen and (max-width: 600px) {
   .portfolio-container{
+    vertical-align: middle;
     grid-template-columns: 272px;
+    width: 100%;
+    margin-bottom: 50px;
+    margin: 0 auto;
+    display: block;
   }
+  .project-item{
+    margin-top: 30px;
+    gap: 0px;
+  }
+
 }
 
 .project-item{
@@ -1067,7 +1077,7 @@
 
 .project-image{
   height: 195px;
-  width: 272px;
+  width: 100%;
 }
 
 
