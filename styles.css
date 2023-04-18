@@ -944,7 +944,7 @@
   /*# sourceMappingURL=styles.css.map */
 
   .skillset-subheading{
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     margin-bottom: 50px;
     margin-top: 50px;
   }
@@ -1121,4 +1121,13 @@
   text-align: center;
   font-size: 2rem;
   margin: 10px;
+}
+
+.language-wrapper{
+  background-color: #1f2338;
+  border-radius: 10px;
+  border-color: #b2becd;
+  border-style: solid;
+  margin-top: 40px;
+  padding-bottom: 30px;
 }
