@@ -1066,6 +1066,11 @@
   background-size: 100px 100px;
 }
 
+.project-item[data-custom-attribute="youtube"]:hover {
+  background-image: url("Img/Youtube.png");
+  background-size: 100px 70px;
+}
+
 
 .project-item:hover img{
   display: none;

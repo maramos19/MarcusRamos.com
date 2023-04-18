@@ -29,6 +29,8 @@ function setControls () {
       document.body.classList.toggle("light-mode");
       mode ++; 
 
+      
+
       //Updating currently selected 
       const projects = document.querySelectorAll('.project-item');
       if(active != ""){
@@ -38,6 +40,7 @@ function setControls () {
           project.style.transition = ".5s";
   
           }
+
         })
         const spans = document.querySelectorAll("span[data-custom-attribute='" + active + "']");
         spans.forEach((span) => {
