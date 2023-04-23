@@ -380,12 +380,12 @@
     font-weight: 600;
   }
   .timeline .timeline-item h5 span {
-    color: var(--color-grey-2);
+    color: var(--color-white);
     font-weight: 500;
     font-size: 1.2rem;
   }
   .timeline .timeline-item p {
-    color: var(--color-grey-2);
+    color: var(--color-white);
   }
   
   .port-text {
